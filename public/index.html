@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>留言板</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>留言板</h1>
+
+        <!-- 用户名称设置 -->
+        <div id="nameSetup" class="section">
+            <h2>请设置您的名称：</h2>
+            <input type="text" id="userName" placeholder="请输入名称" maxlength="20">
+            <button id="setNameButton">确认</button>
+        </div>
+
+        <!-- 留言输入 -->
+        <div id="messageInput" class="section" style="display: none;">
+            <h2>留言：</h2>
+            <textarea id="messageText" placeholder="请输入留言（小于50字）" maxlength="50"></textarea>
+            <button id="submitMessageButton">提交</button>
+        </div>
+
+        <!-- 留言展示 -->
+        <div id="messageList" class="section">
+            <h2>留言列表：</h2>
+            <ul id="messages"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
