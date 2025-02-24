@@ -3,7 +3,7 @@ const q = faunadb.query;
 
 exports.handler = async (event) => {
     const client = new faunadb.Client({ secret: process.env.FAUNADB_SECRET });
-    const { userName, message } = JSON.parse(event.body);
+    const { userName, message, imageUrl } = JSON.parse(event.body);
 
     try {
         const result = await client.query(
@@ -11,6 +11,7 @@ exports.handler = async (event) => {
                 data: {
                     userName,
                     message,
+                    imageUrl,
                     time: new Date().toLocaleString()
                 }
             })
