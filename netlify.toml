@@ -1,5 +1,5 @@
 [build]
-  command = "npm install && npm run build"
+  command = "npm install"  # 只需安装依赖，无需构建
   publish = "public"
   functions = "netlify/functions"
 
